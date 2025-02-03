@@ -1,0 +1,166 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: url('https://media.post.rvohealth.io/wp-content/uploads/sites/3/2024/01/air-bronchitis-GettyImages-641897856-Header-1024x575.jpg') no-repeat center center fixed; /* Soft nature image (clear sky and clouds) */
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Wrapper Styling for the main container */
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px); /* Soft blur effect for the background */
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Title Styling */
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #9b4d96; /* Elegant violet */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Soft text shadow */
+}
+
+/* Subtitle Styling */
+.subtitle {
+    font-size: 18px;
+    color: #5a3d64;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Input and Button Container */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"] {
+    padding: 15px;
+    width: 80%;
+    border-radius: 50px;
+    border: 3px solid #9b4d96; /* Violet border */
+    font-size: 18px;
+    outline: none;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: all 0.4s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #7a3c8f; /* Darker violet on focus */
+    background-color: #fff;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #9b4d96;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a3c8f;
+    transform: translateY(-3px);
+}
+
+/* Result Section Styling */
+.result {
+    background: url('https://htmlcolorcodes.com/assets/images/colors/light-violet-color-solid-background-1920x1080.png') no-repeat center center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 40px;
+    transform: translateY(50px);
+}
+
+.result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result h3,
+.result p {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.result h3 {
+    font-weight: 700;
+    color: #9b4d96;
+}
+
+.result p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Floating effect for page content */
+.wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 500px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
